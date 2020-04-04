@@ -295,9 +295,14 @@ header {
 
 section#whyCuttle {
     background-color: black;
-    padding-right: 8%;
-    padding-top: 8%;
+    padding: 8% 8% 8% 25px;
     
+    
+}
+
+h2.workLink {
+    position: relative;
+    top: 30px;
 }
 
 .gridBox {

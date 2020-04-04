@@ -218,7 +218,7 @@ nav#mobileNav {
     background-color: #e6a300;
     min-height: 100vh;
     position: fixed;
-    overflow-x: hidden;
+    overflow-x: scroll;
     z-index: 2;
     text-transform: uppercase;
     font-size: 2em;

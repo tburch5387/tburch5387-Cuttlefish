@@ -155,7 +155,7 @@ section#experimental:hover ~ nav#rightNav a[href="#experimental"] {
 }
 
 
-@media only screen and (max-width: 760px), only screen and (orientation: portrait) {
+@media only screen and (max-width: 1000px), only screen and (orientation: portrait) {
     nav#rightNav {
         display: none;
     }
@@ -166,11 +166,10 @@ section#experimental:hover ~ nav#rightNav a[href="#experimental"] {
 
 /*mobile nav */
 
-@media only screen and (min-width: 760px), only screen and (orientation: landscape) {
+@media only screen and (min-width: 1000px) {
     nav#mobileNav {
         display: none;
     }
-
 }
 
 #header {
@@ -216,9 +215,10 @@ span.fas:hover {
 nav#mobileNav {
     text-align: right;
     background-color: #e6a300;
-    min-height: 100vh;
+    height: 100%;
     position: fixed;
-    overflow-x: scroll;
+    overflow-x: hidden;
+    overflow-y: visible;
     z-index: 2;
     text-transform: uppercase;
     font-size: 2em;

@@ -1,0 +1,422 @@
+/*color reference
+
+#9a2f00 - reddish
+#5f2c25 - reddish brown
+#382628 - black
+#f9f4e7 - white
+#ffe9f9 - pale pink
+#bdb2bc - neutral lavendar
+#bea165 - light gold
+#e6a300 - bright gold
+#17799e - blue accent
+#003e5d - dark teal
+#c4e2f2 - pale blue */
+
+/*general whole page style */
+
+/* remove: all section styles are wierd right now in mobile - Need to media query section back to equal margins - will it work with ID based margins in play? Maybe need to make the assymtric margins the standard, and adjust as needed by ID */
+
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    background-color: #ffe9f9;
+    color: #382628;
+}
+
+body {
+    font-family: transat-text, arial, sans-serif;
+}
+
+section {
+    background-color: #ffe9f9;
+    padding: 3% 75px 1% 25px;
+
+}
+
+@media only screen and (max-width: 1000px), only screen and (orientation: portrait) {
+    section {
+        padding: 3% 3% 8% 3%;
+    }
+}
+
+a {
+    color: #17799e;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #003e5d;
+}
+
+
+/* .divider {
+    height: 80px;
+    background-color: #c4e2f2;
+    transform-origin: top left;
+    transform: skewY(3deg); 
+}
+
+.divider2 {
+    height: 80px;
+    background-color: #c4e2f2;
+    transform-origin: top left;
+    transform: skewY(-3deg); 
+}
+
+.divider3 {
+    height: 80px;
+    background-color: #c4e2f2;
+    transform-origin: top right;
+    transform: skewY(-3deg); 
+}
+
+.divider4 {
+    height: 80px;
+    background-color: #c4e2f2;
+    transform-origin: top right;
+    transform: skewY(3deg); 
+} */
+
+/*nav styles */
+/* pop over menu only on mobile and on portrait view where height > width */
+
+nav#rightNav {
+    display: flex;
+    position: fixed;
+    min-width: 100%;
+    height: 50px;
+    transform-origin: right top;
+    transform: rotate(90deg);
+    background: rgba(230, 163, 0, 1);
+    margin: 0;
+    top: 100vw;
+    right: 0;
+    /*remove later */
+    z-index: 1;
+    
+}
+
+/*in case i want traditional nav 
+nav#rightNav {
+   
+    position: fixed;
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    height: 40px;
+    top: 0;
+    right: 0;
+    background: linear-gradient(to left, rgba(230, 163, 0, 1), rgba(190, 161, 101, 6), rgba(230, 163, 0, 0) 75%);
+    margin: 0;
+
+}
+
+*/
+
+
+
+ul.nav  {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    line-height: 50px;;
+    padding-left: 40px;
+    
+}
+
+
+
+#logoMenu {
+    width: 40px;
+    height: 40px;
+    padding-top: 10px;
+    display: flex;
+    transform: rotate(-90deg);
+}
+
+.mainNav a {
+    color: #382628;
+    padding: 20px 10px 20px 10px;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: background-color .5s, color .5s;
+}
+
+.mainNav a:hover, 
+/*fake scrollspy selectors (desktop only) */
+section#work:hover ~ nav#rightNav a[href="#work"],
+section#skills:hover ~ nav#rightNav a[href="#skills"],
+section#about:hover ~ nav#rightNav a[href="#about"],
+section#contact:hover ~ nav#rightNav a[href="#contact"],
+section#experimental:hover ~ nav#rightNav a[href="#experimental"] {
+    background-color: #9a2f00;
+    color: rgba(230, 163, 0, 1);
+   
+}
+
+
+@media only screen and (max-width: 1000px), only screen and (orientation: portrait) {
+    nav#rightNav {
+        display: none;
+    }
+
+}
+
+
+
+/*mobile nav */
+
+@media only screen and (min-width: 1000px) {
+    nav#mobileNav {
+        display: none;
+    }
+
+}
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#header button, #mobileNav button {
+    align-items: flex-end;
+    background-color: inherit;
+    border: none;
+    padding-right: 25px;
+    outline: none;
+}
+
+#header button:hover {
+    transform: rotate3d(180deg);
+}
+
+.fas {
+    color: #e6a300;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: ease-in .2s;
+}
+
+.fa-times {
+    color: #382628;
+    font-size: 30px;
+}
+
+button#closeMenu {
+    top:5;
+    left:5;
+    position: absolute;
+}
+
+span.fas:hover {
+    transform: rotate(180deg);
+}
+
+nav#mobileNav {
+    text-align: right;
+    background-color: #e6a300;
+    min-height: 100vh;
+    position: fixed;
+    overflow-x: hidden;
+    z-index: 2;
+    text-transform: uppercase;
+    font-size: 2em;
+    font-weight: bold;
+    width: 0;
+    transition: .8s;
+    top: 0;
+    right: 0;
+}
+
+ul.hideNav {
+    list-style: none;
+    padding:8px 0 0 0 ;
+}
+
+li.mobItem {
+    padding: 30px;
+    color:  #382628;
+}
+
+
+
+li.mobItem:hover {
+    background-color: #17799e;
+    color: #e6a300;
+}
+
+/*logo style */
+
+header {
+    background-color: #382628;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+
+}
+
+.logoType {
+    font-family: henderson-slab-basic, courier, serif;
+    font-style: normal;
+    font-weight: bold;
+}
+
+#primaryLogo {
+    font-size: 2em;
+    color: #ffe9f9;
+    background: linear-gradient(to left, #ffdbf4, #ffa8f3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0;
+    transition: .2s ease;
+    padding: 10px;
+}
+
+@media only screen and (max-width: 760px) {
+    #primaryLogo {
+        font-size: 1.5em;
+        max-width: 200px;
+    }
+    #header {
+        background-color: black;
+    }
+}
+
+/* create separate scroll for smaller screens
+
+/* why cuttle style */
+
+@keyframes flash {
+    from {filter: brightness(85%); filter:hue(45deg);}
+    to {filter: brightness(150%); filter:hue(90deg);}
+}
+
+
+section#whyCuttle {
+    background-color: black;
+    padding-right: 8%;
+    padding-top: 8%;
+    
+}
+
+.gridBox {
+    display: grid;
+    grid-template-columns: 55% 45%;
+    grid-gap: 2%;
+}
+
+@media only screen and (max-width: 760px) {
+    .gridBox {
+        grid-template-columns: repeat(1,1fr)
+    }
+}
+
+div.encycloPic {
+    animation: flash 2s infinite alternate;
+    background-color: black;  
+}
+
+.responsive {
+    max-width: 100%;
+    height: auto;
+}
+
+div.encyclo {
+    color: #bdb2bc;
+}
+
+.encyclo hr {
+    border-color: #bea165;
+}
+
+.termHeading, .termClass {
+    color: #f9f4e7;
+}
+
+/* work styles */
+
+/*would like this to be a slider that shows three and scrolls - but when smaller it shows 1 and scrolls */
+.workBox {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 10px; 
+}
+
+@media only screen and (max-width: 1000px) {
+    .workBox {
+        grid-template-columns: repeat(2,1fr)
+    }
+}
+
+@media only screen and (max-width: 760px) {
+    .workBox {
+        grid-template-columns: repeat(1,1fr)
+    }
+}
+
+
+#work div.gridItem {
+    background: blue;
+    height: 400px;
+    min-width: 10px;
+}
+
+/*skills styles */
+
+section#skills {
+    /* background-color: #c4e2f2; */
+}
+
+/*about styles */
+/*remove - review styles from the bootstrap site for this section */
+
+section#about {
+    position: relative;
+}
+
+
+.aboutBox {
+    align-items: center;
+    grid-gap: 5%;
+    padding: 25px;
+    margin-bottom: 20px;
+
+
+}
+
+.aboutBox {
+    display: grid;
+    grid-template-columns: 70% 25%;
+    
+}
+
+
+
+@media only screen and (max-width: 760px) {
+    .aboutBox {
+        grid-template-columns: repeat(1,1fr)
+    }
+    .team {
+        text-align: center;
+        justify-content: center;
+    }
+}
+
+div.team {
+    display: grid;
+}
+
+.teamPhoto {
+    border-radius: 50%;
+    height: 200px;
+}
+
+/*contact*/
+
+section#contact {
+    /* background-color: #c4e2f2; */
+}
+
+
+/*experimental */

@@ -155,7 +155,7 @@ section#experimental:hover ~ nav#rightNav a[href="#experimental"] {
 }
 
 
-@media only screen and (max-width: 1000px), only screen and (orientation: portrait) {
+@media only screen and (max-width: 760px), only screen and (orientation: portrait) {
     nav#rightNav {
         display: none;
     }
@@ -166,7 +166,7 @@ section#experimental:hover ~ nav#rightNav a[href="#experimental"] {
 
 /*mobile nav */
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 760px), only screen and (orientation: landscape) {
     nav#mobileNav {
         display: none;
     }

@@ -54,3 +54,11 @@ function openSide() {
         }
   });
 
+  $('.main-gallery').flickity({
+    // options
+    cellAlign: 'center',
+    wrapAround: true,
+    watchCSS: true,
+    pageDots:false,
+ 
+  });

@@ -15,7 +15,8 @@
         <title>Cuttlefish Creative</title>
         <!-- Adobe Fonts for this project: Transat Text, Henderson Slab, Coquette -->
         <link rel="stylesheet" href="https://use.typekit.net/yml1jtt.css">
-
+        <!-- Flickity CSS -->
+        <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
         <link rel="stylesheet" href="normalize8.css" type="text/css">
         <link rel="stylesheet" href="darkSide.css" type="text/css">
         <link rel="stylesheet" href="lightSide.css" type="text/css">
@@ -59,7 +60,7 @@
                     we are constantly growing and learning. </p>
 
                 <a href="#work">
-                    <h2 class="workLink">Check out a sample of my work below</h2>
+                    <h2 class="workLink">Check out a selection of my work below</h2>
                 </a>
 
 
@@ -69,13 +70,13 @@
 
         <section id="work">
             <h2 class="logoType sectionHeading">work</h2>
-            <div class="digital workBox">
-                <div class="gridItem"></div>
-                <div class="gridItem"></div>
-                <div class="gridItem"></div>
-                <div class="gridItem"></div>
-                <div class="gridItem"></div>
-                <div class="gridItem"></div>
+            <div class="digital workBox main-gallery">
+                <div class="gridItem gallery-cell"></div>
+                <div class="gridItem gallery-cell"></div>
+                <div class="gridItem gallery-cell"></div>
+                <div class="gridItem gallery-cell"></div>
+                <div class="gridItem gallery-cell"></div>
+                <div class="gridItem gallery-cell"></div>
             </div>
             <!-- <div class="analog"> -->
             <!--examples of non-digital work in a slider of some sort-->
@@ -85,14 +86,20 @@
         <section id="skills">
             <h2 class="logoType sectionHeading">skills</h2>
             <!-- create a little gadget that shows off each skill -->
-            <div class="skillList">
-                <ul>
-                    <li id="html5" class="skillItem">&lt;html>HTML5&lt;/html></li>
-                    <li id="css" class="skillItem">CSS3</li>
-                    <li id="bootstrap" class="skillItem">Bootstrap</li>
-                    <li id="js" class="skillItem">Javascript</li>
-                    <li id="wordpress" class="skillItem">Wordpress</li>
-                    <li id="php" class="skillItem">PHP</li>
+            <div>
+                <ul class="skillList">
+                    <li id="html5" class="skillItem"><img src="assets/HTML5 Logo.png" alt="html5 logo"></li>
+                    <li id="css" class="skillItem"><img src="assets/css.png" alt="css3 logo"></li>
+                    <li id="bootstrap" class="skillItem"><img src="assets/Bootstraplight.png" alt="bootstrap logo">
+                    </li>
+                    <li id="js" class="skillItem"><img src="assets/js.png" alt="JS logo"></li>
+                    <li id="wordpress" class="skillItem"><img src="assets/wordpress.png" alt="wordpress logo"></li>
+                    <li id="photoshop" class="skillItem"><img src="" alt="photoshop Logo"></li>
+                    illustrator
+                    apple
+                    mail chimp
+
+
 
                 </ul>
             </div>
@@ -199,7 +206,9 @@
 
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"
             integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-        <!--scripts for owl carousel -->
+        <!-- JQuery -->
+        <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+        <!-- JavaScript - flickity  - -->
         <script src="script/travScript.js"></script>
         <!-- my own JS-->
         <script src="https://kit.fontawesome.com/490200af58.js" crossorigin="anonymous"></script>

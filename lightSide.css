@@ -33,6 +33,11 @@ section {
 
 }
 
+.sectionHeading {
+    padding-top: 5px;
+
+}
+
 @media only screen and (max-width: 1000px), only screen and (orientation: portrait) {
     section {
         padding: 3% 3% 8% 3%;
@@ -341,12 +346,42 @@ div.encyclo {
 
 /* work styles */
 
-/*would like this to be a slider that shows three and scrolls - but when smaller it shows 1 and scrolls */
+
 .workBox {
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-gap: 10px; 
 }
+/* flickity */
+.gallery-cell {
+    width: 100%;
+  }
+
+  .main-gallery:after {
+      content: 'flickity';
+      display: none;
+  }
+
+  /* disable on large screens */
+  @media screen and (min-width: 760px) {
+      .main-gallery:after {
+          content: '';
+      }
+  }
+
+  .flickity-button {
+    background: transparent;
+    top: 350;
+  }
+
+  .flickity-button-icon {
+    fill: white;
+    transition: all .3s ease;
+  }
+
+  .flickity-button:hover {
+    background: rgba(0,0,0,.3);
+  }
 
 @media only screen and (max-width: 1000px) {
     .workBox {
@@ -356,9 +391,17 @@ div.encyclo {
 
 @media only screen and (max-width: 760px) {
     .workBox {
-        grid-template-columns: repeat(1,1fr)
+        grid-template-columns: repeat(1,1fr) 
+    }
+    section#work {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    section#work .sectionHeading{
+        padding-left: 3%;
     }
 }
+
 
 
 #work div.gridItem {
@@ -371,6 +414,10 @@ div.encyclo {
 
 section#skills {
     /* background-color: #c4e2f2; */
+}
+
+ul.skillList {
+    list-style: none;
 }
 
 /*about styles */

@@ -418,6 +418,16 @@ section#skills {
 
 ul.skillList {
     list-style: none;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+    align-items: center;
+}
+
+li.skillItem img{
+    max-width: 150px;
+    padding: 10%;
 }
 
 /*about styles */

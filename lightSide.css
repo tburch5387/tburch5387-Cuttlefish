@@ -16,6 +16,9 @@
 
 /* remove: all section styles are wierd right now in mobile - Need to media query section back to equal margins - will it work with ID based margins in play? Maybe need to make the assymtric margins the standard, and adjust as needed by ID */
 
+* {
+    box-sizing: border-box;
+}
 html {
     box-sizing: border-box;
     scroll-behavior: smooth;
@@ -29,14 +32,26 @@ body {
 
 section {
     background-color: #ffe9f9;
-    padding: 3% 75px 1% 25px;
+    padding: 1.5% 75px 1% 25px;
 
 }
 
 .sectionHeading {
     padding-top: 5px;
+    width: 100vw;
+    position: relative;
+    margin-left: -50vw;
+    left: 50%;
+    height: 35px;
+    background-color: #5f2c25;
+    border-bottom: 2px solid;
+    background: linear-gradient(270deg, #382628 10%, rgba(95,44,37,1) 70%);
+    color: #ffe9f9;
+    font-size: 1.25em;
+    padding-left: 5%;
 
 }
+
 
 @media only screen and (max-width: 1000px), only screen and (orientation: portrait) {
     section {
@@ -278,7 +293,7 @@ header {
     padding: 10px;
 }
 
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 768px) {
     #primaryLogo {
         font-size: 1.5em;
         max-width: 200px;
@@ -300,7 +315,8 @@ header {
 
 section#whyCuttle {
     background-color: black;
-    padding: 8% 8% 8% 25px;
+    padding: 3% 8% 8% 25px;
+    line-height: 1.35;
     
     
 }
@@ -316,7 +332,7 @@ h2.workLink {
     grid-gap: 2%;
 }
 
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 768px) {
     .gridBox {
         grid-template-columns: repeat(1,1fr)
     }
@@ -363,11 +379,21 @@ div.encyclo {
   }
 
   /* disable on large screens */
-  @media screen and (min-width: 760px) {
+  @media screen and (min-width: 768px) {
       .main-gallery:after {
           content: '';
       }
   }
+
+  @media screen and (max-width: 768px) {
+    .workBox {
+        position: relative;
+        width: 100vw;
+        margin-left: -50vw;
+        left: 50%;
+    
+    }
+}
 
   .flickity-button {
     background: transparent;
@@ -389,17 +415,15 @@ div.encyclo {
     }
 }
 
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 768px) {
     .workBox {
         grid-template-columns: repeat(1,1fr) 
     }
-    section#work {
+    /* section#work {
         padding-left: 0;
         padding-right: 0;
-    }
-    section#work .sectionHeading{
-        padding-left: 3%;
-    }
+    } */
+    
 }
 
 
@@ -426,10 +450,17 @@ ul.skillList {
 }
 
 li.skillItem img{
+    box-sizing: content-box;
     max-width: 150px;
     padding: 10%;
 }
 
+/*make sure that icons never go 1 per line */
+@media only screen and (max-width: 768px) {
+    li.skillItem img {
+        max-width: 100px;
+    }
+}
 /*about styles */
 /*remove - review styles from the bootstrap site for this section */
 
@@ -455,7 +486,7 @@ section#about {
 
 
 
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 768px) {
     .aboutBox {
         grid-template-columns: repeat(1,1fr)
     }

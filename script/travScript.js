@@ -1,5 +1,5 @@
 //function to adjust header based on screensize and scroll
-window.onscroll = function() {this.headScroll(screen)};
+
 
 function headScroll(screen) {
     if (screen.matches) {
@@ -31,12 +31,13 @@ function headScroll(screen) {
 }
 }
 
-var screen = window.matchMedia("(max-width: 760px)")
+window.onscroll = function() {headScroll(screen)};
+
+var screen = window.matchMedia("(max-width: 768px)")
 screen.addListener(headScroll) 
 
 
 //open and close nav on screens less than 1000 px for tablets/phones
-
 function openSide() {
     document.getElementById("mobileNav").style.width = "300px";
   }
@@ -44,7 +45,7 @@ function openSide() {
 //close
   function closeSide() {
     document.getElementById("mobileNav").style.width = "0";
-  }
+}
 
 //close menu if click outside
   window.addEventListener('mouseup', function(){
@@ -54,6 +55,8 @@ function openSide() {
         }
   });
 
+
+//flickity gallery
   $('.main-gallery').flickity({
     // options
     cellAlign: 'center',
@@ -62,3 +65,14 @@ function openSide() {
     pageDots:false,
  
   });
+
+//single column resume for small screens
+  var screen2 = window.matchMedia("(max-width: 768px)")
+screen2.addListener(mobileRes) 
+
+  function mobileRes(screen2) {
+    if (screen2.matches) {
+      document.getElementById(`resume`).href = "assets/tburch_web_single_column.pdf";
+    }
+  }
+

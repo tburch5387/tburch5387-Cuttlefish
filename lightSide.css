@@ -37,18 +37,19 @@ section {
 }
 
 .sectionHeading {
-    padding-top: 5px;
+
     width: 100vw;
     position: relative;
     margin-left: -50vw;
     left: 50%;
     height: 35px;
     background-color: #5f2c25;
-    border-bottom: 2px solid;
     background: linear-gradient(270deg, #382628 10%, rgba(95,44,37,1) 70%);
     color: #ffe9f9;
     font-size: 1.25em;
     padding-left: 5%;
+    text-transform: uppercase;
+    line-height: 35px;
 
 }
 
@@ -511,5 +512,40 @@ section#contact {
     /* background-color: #c4e2f2; */
 }
 
+/*override google styles */
+.freebirdFormviewerViewCenteredContent {
+    width: 60% !important;
+}
+
+@media only screen and (max-width: 768px) {
+    .freebirdFormviewerViewCenteredContent {
+        width: 90% !important;}
+    
+}
+
+.freebirdFormviewerViewNavigationPasswordWarning {
+    display: none !important;
+}
+
+.freebirdFormviewerViewFooterFooterContainer {
+    display: none !important
+}
+
+.freebirdFormviewerViewHeaderRequiredLegend, .freebirdFormviewerViewItemsItemRequiredAsterisk {
+    color: #9a2f00 !important;
+}
+.appsMaterialWizButtonPaperbuttonFilled:hover {
+    background-color: #17799e !important;
+}
+
+/* modal styles */
+
+/* #contactModal {
+    background-color: rgba(0,0,0,.7);
+    display: none;
+    margin: 0, auto;
+    position: fixed;
+    width: 200px;
+} */
 
 /*experimental */

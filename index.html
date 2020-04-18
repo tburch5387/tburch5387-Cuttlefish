@@ -27,7 +27,7 @@
     <body>
         <!-- logo header bar, maybe incorporate light switch?  -->
         <header id="header">
-            <a href="#primaryLogo">
+            <a href="#whyCuttle">
                 <h1 id="primaryLogo" class="logoType">cuttlefish creative</h1>
             </a>
             <button aria-label="menu_open" aria-controls="navigation"><span onclick="openSide()"
@@ -69,7 +69,7 @@
         </section> <!-- whyCuttle/top wrapper -->
 
         <section id="work">
-            <h2 class="logoType sectionHeading">work</h2>
+            <h2 class="sectionHeading">work</h2>
             <div class="digital workBox main-gallery">
                 <div class="gridItem gallery-cell"></div>
                 <div class="gridItem gallery-cell"></div>
@@ -84,7 +84,7 @@
         </section> <!-- work -->
         <!-- <div class="divider"></div> -->
         <section id="skills">
-            <h2 class="logoType sectionHeading">skills</h2>
+            <h2 class="sectionHeading">skills</h2>
             <!-- create a little gadget that shows off each skill -->
             <div>
                 <ul class="skillList">
@@ -108,7 +108,7 @@
         <!-- <div class="divider2"></div> -->
 
         <section id="about">
-            <h2 class="logoType sectionHeading">about</h2>
+            <h2 class="sectionHeading">about</h2>
             <div class="aboutBox">
                 <div class="team">
                     <h3>Travis</h3>
@@ -141,24 +141,24 @@
                 </div>
             </div>
             -->
-            <div class="team action">
-                <p>
-                    Stick around, click around, let us know what you think. If you like what you see - Drop us a line -
-                    we’d love to tackle your next project with you!
-                </p>
-            </div>
 
         </section> <!-- about -->
         <!-- <div class="divider3"></div> -->
         <section id="contact">
-            <h2 class="logoType sectionHeading">contact</h2>
-            <!-- simple clean contact form -->
+            <!-- temporary google form using https://googleformrestyler.apixml.net/-->
+            <h2 class=" sectionHeading">contact</h2>
+            <script src="http://googleformrestyler.apixml.net/GoogleFormStyler.js"
+                form="https://docs.google.com/forms/d/e/1FAIpQLSdAkYpjQUURHvvSL5hQDn0rMq1r8I22J_4fR9iSTm2DHdVg9g/viewform?embedded=true">
+                </script>
+
+
+            <!-- <div id="contactModal">Thanks</div> -->
         </section> <!-- contact -->
         <div class="divider4"></div>
+        <!--
         <section id="experimental">
-            <h2 class="logoType sectionHeading">experimental</h2>
-            <!-- simple clean contact form -->
-        </section> <!-- contact -->
+            <h2 class="sectionHeading">experimental</h2>
+        </section> -->
 
         <nav id="rightNav">
             <!-- navigation menu fixed on the right side of the screen -->
@@ -168,7 +168,7 @@
                 <li><a class="navitem" href="#about">about</a></li>
                 <li><a class="navitem" href="#contact">contact</a></li>
                 <li><a class="navitem" target="_blank" href="assets/travis_burch_web.pdf">resume</a></li>
-                <li><a class="navitem experimental" href="#experimental">experimental</a></li>
+                <!-- <li><a class="navitem experimental" href="#experimental">experimental</a></li> -->
                 <!-- possibly make this non-scrollable or a separate page as it may be broken at any time -->
 
             </ul>
@@ -196,9 +196,9 @@
                 <a id="resume" href="assets/travis_burch_web.pdf" target="_blank">
                     <li class="mobItem">resume</li>
                 </a>
-                <a href="#experimental">
+                <!-- <a href="#experimental">
                     <li class="mobItem experiemental">experimental</li>
-                </a>
+                </a> -->
 
                 <!-- possibly make this non-scrollable or a separate page as it may be broken at any time -->
             </ul>

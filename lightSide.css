@@ -483,6 +483,10 @@ div.encyclo {
     opacity: 100%;
 }
 
+.gridItem:focus .hoverlay {
+    opacity: 100%;
+}
+
 .skillsUsed li {
     list-style: none;
     text-align: left;

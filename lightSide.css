@@ -449,7 +449,7 @@ div.encyclo {
     position: absolute;
     top: 50%;
     width: 100%;
-    height: 100%;
+    height: auto;
     text-align: center;
 }
 
@@ -479,7 +479,7 @@ div.encyclo {
     transition: opacity ease 1s;
 }
 
-.gridItem:hover .hoverlay {
+.gridItem:hover .hoverlay, .gridItem:focus .hoverlay, .gridItem:active .hoverlay   {
     opacity: 100%;
 }
 

@@ -469,7 +469,7 @@ div.encyclo {
     position: absolute;
     top: 0;
     padding: 20% 10% 10% 10%;
-    color: white;
+    color: #ffe9f9;
     width: 100%;
     height: 100%;
     background: rgb(0,0,0);
@@ -487,11 +487,14 @@ div.encyclo {
     position: absolute;
     top: 0;
     padding: 20% 10% 10% 10%;
-    color: white;
+    color: #ffe9f9;
     width: 100%;
     height: 100%;
     background: rgb(0,0,0);
     background: rgba(0, 0, 0, 0.95);
+    background-image: url('assets/x.png');
+    background-repeat: no-repeat;
+    background-position: top 20px right 20px;
     text-align: center;
     opacity: 100%;
     transition: opacity ease 1s;

@@ -92,8 +92,11 @@ screen2.addListener(mobileRes)
 
 // jquery function to make overlay visible on click - 
 
-$('.changing').on('click', function()
-{
+if 
+  ($(window).width() < 768) {$('.changing').on('click', function() {
     $(this).toggleClass('hoverlay hoverlayClick');
 });
+};
+
+//ultimately would like to make this pure js and click anywhere to close. I'm out playing my knowledge...
 

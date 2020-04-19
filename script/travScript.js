@@ -89,3 +89,11 @@ screen2.addListener(mobileRes)
 // 	alert = `intercept`
 // }, true); 
 
+
+// jquery function to make overlay visible on click - 
+
+$('.changing').on('click', function()
+{
+    $(this).toggleClass('hoverlay hoverlayClick');
+});
+
